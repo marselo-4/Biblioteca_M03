@@ -17,6 +17,7 @@ public class Main {
 		arraymaterialL.add(test1_libro);
 		 arraymaterialL.add(test1_articulo);
 		 arraymaterialL.add(test1_revista);
+		 System.out.println("hola");
 
 	}
 }
