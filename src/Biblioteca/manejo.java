@@ -56,7 +56,7 @@ public class manejo {
 		String tematica = scan_String.nextLine();
 		System.out.println("Introduzca true o false si el libro esta reservado o no");
 		boolean reservado = scan_String.nextBoolean();
-		Libro  = new Libro(id, titulo, autor, tematica, reservado);
+		//Libro  = new Libro(id, titulo, autor, tematica, reservado);
 
 	}
 	
