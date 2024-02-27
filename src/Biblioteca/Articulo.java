@@ -1,5 +1,7 @@
 package Biblioteca;
 
+import java.util.Scanner;
+
 public class Articulo extends materialL {
 	private boolean disponible;
 	
@@ -34,5 +36,13 @@ public class Articulo extends materialL {
 		super.imprimir();
 		System.out.println("Disponible --> " + this.disponible);
 	}
-
+	
+	@Override
+	public void editar() {
+		Scanner scan_String = new Scanner(System.in);
+		super.editar();
+		System.out.println("Indica de nuevo si esta disponible, estado actual --> " + this.disponible);
+		boolean disponible_nuevo = scan_String.nextBoolean();
+		setDisponible(disponible_nuevo);
+	}
 }

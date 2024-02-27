@@ -1,5 +1,7 @@
 package Biblioteca;
 
+import java.util.Scanner;
+
 public class Revista extends materialL {
 	private double precio;
 
@@ -31,5 +33,14 @@ public class Revista extends materialL {
 	public void imprimir() {
 		super.imprimir();
 		System.out.println("Precio -->  " + this.precio);
+	}
+	
+	@Override
+	public void editar() {
+		Scanner scan_num = new Scanner(System.in);
+		super.editar();
+		System.out.println("Indica de nuevo si esta disponible, estado actual --> " + this.precio);
+		int precio_nuevo = scan_num.nextInt();
+		setPrecio(precio_nuevo);
 	}
 }

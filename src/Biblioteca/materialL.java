@@ -1,6 +1,7 @@
 package Biblioteca;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public abstract class materialL {
 	private String id;
@@ -64,6 +65,24 @@ public abstract class materialL {
 		System.out.println("Autor --> " + this.autor);
 		System.out.println("Tematica --> " + this.tematica);
 
+	}
+	
+	public void editar() {
+		Scanner scan_String = new Scanner(System.in);
+		Scanner scan_num = new Scanner(System.in);
+
+		System.out.println("Indica el nuevo id, id actual --> " + this.id);
+		String id_nuevo = scan_String.nextLine();
+		setId(id_nuevo);
+		System.out.println("Indica el nuevo titulo, titulo actual --> " + this.titulo);
+		String titulo_nuevo = scan_String.nextLine();
+		setTitulo(titulo_nuevo);
+		System.out.println("Indica el nuevo autor, autor actual --> " + this.autor);
+		String autor_nuevo = scan_String.nextLine();
+		setAutor(autor_nuevo);
+		System.out.println("Indica el nuevo tematica, tematica actual --> " + this.tematica);
+		String tematica_nuevo = scan_String.nextLine();
+		setTematica(tematica_nuevo);
 	}
 
 }
