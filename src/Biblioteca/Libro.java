@@ -10,7 +10,7 @@ public class Libro extends materialL {
 
 	}
 
-	public boolean isReservado() {
+	public boolean getReservado() {
 		return reservado;
 	}
 

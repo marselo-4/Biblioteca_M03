@@ -18,6 +18,7 @@ public static void main(String[] args) {
 		int eleccion = scan.nextInt();
 		if (eleccion == 1) {
 			reservar();
+			mostrarReservas();
 			fin = true;
 		}else if (eleccion == 2) {
 			cancelarReserva();
@@ -33,6 +34,13 @@ public static void main(String[] args) {
 	}//Fin main
 
 private static void reservar() {
+	Libro l = new Libro ("L00001", "titulo_generico1", "Perro sanche" , "politica", false);	
+	Articulo a = new Articulo ("A00001", "titulo_generico2", "Pablo motos", "fantasia", true);
+	Libro l2 = new Libro ("L00001", "titulo_generico1", "Perro sanche" , "politica", false);	
+	Main.arraymaterialL.add(a);
+
+	Main.arraymaterialL.add(l);
+	Main.arraymaterialL.add(l2);
 	
 }
 
@@ -45,8 +53,26 @@ private static void historialReservas() {
 }
 
 private static void mostrarReservas() {
-	for (int i = 0; i < Main.arraymaterialL.size(); i++) {
-		
+	for (materialL obj : Main.arraymaterialL) {
+		System.out.println(obj);
+		if (obj instanceof Libro) {
+			Libro lib = (Libro) obj;
+			//Si está reservado: mostrar nombre
+			if (lib.getReservado()) {
+				System.out.println("------------------------------");
+				lib.imprimir();
+				System.out.println("------------------------------");
+			}
+			
+		}else if (obj instanceof Articulo) {
+			Articulo art = (Articulo) obj;
+			if (art.getDisponible()) {
+				System.out.println("------------------------------");
+				art.imprimir();
+				System.out.println("------------------------------");
+			}
+		}
+
 	}
 }
 

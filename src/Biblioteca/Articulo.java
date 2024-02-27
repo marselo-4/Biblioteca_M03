@@ -9,7 +9,7 @@ public class Articulo extends materialL {
 		this.disponible = disponible;
 	}
 
-	public boolean isDisponible() {
+	public boolean getDisponible() {
 		return disponible;
 	}
 
