@@ -73,7 +73,7 @@ public abstract class materialL {
 
 		System.out.println("Indica el nuevo id, id actual --> " + this.id);
 		String id_nuevo = scan_String.nextLine();
-		setId(id_nuevo);
+		setId(id_nuevo); 
 		System.out.println("Indica el nuevo titulo, titulo actual --> " + this.titulo);
 		String titulo_nuevo = scan_String.nextLine();
 		setTitulo(titulo_nuevo);
