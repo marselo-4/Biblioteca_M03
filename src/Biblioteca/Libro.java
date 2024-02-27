@@ -19,6 +19,14 @@ public class Libro extends materialL {
 	public void setReservado(boolean reservado) {
 		this.reservado = reservado;
 	}
+	
+	public void reservado(boolean bool) {
+		if (bool) {
+			this.reservado = true;
+		}else {
+			this.reservado = false;
+		}
+	}
 
 	@Override
 	public void imprimir() {
