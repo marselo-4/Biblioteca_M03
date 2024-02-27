@@ -52,7 +52,7 @@ private static void reservar() {
 		String tipo = scan_s.nextLine().toUpperCase();
 		if (tipo.equals("LIBRO")) {
 			mostrarLibros(true);
-			System.out.println("Qué libro desea reservar?");
+			System.out.println("Qué libro desea reservar? (insertar ID)");
 			String idLibro = scan_s.nextLine();
 			
 			for (materialL obj : Main.arraymaterialL) {
@@ -66,7 +66,7 @@ private static void reservar() {
 			
 		}else if (tipo.equals("ARTICULO")) {
 			mostrarArticulos(true);
-			System.out.println("Qué artículo desea reservar?");
+			System.out.println("Qué artículo desea reservar? (insertar ID)");
 			String idArticulo = scan_s.nextLine();
 			
 			for (materialL obj : Main.arraymaterialL) {
@@ -80,6 +80,9 @@ private static void reservar() {
 		}
 		
 		System.out.println("Desea reservar algún producto más?");
+		System.out.println("--> 'Si'");
+		System.out.println("--> 'No'");
+
 		boolean a = false;
 		while (!a) {
 			String continuar = scan_s.nextLine().toUpperCase();
