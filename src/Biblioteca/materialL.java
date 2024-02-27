@@ -20,4 +20,54 @@ public materialL (String id, String titulo, String autor, String tematica ) {
 	this.tematica = tematica;
 }
 
+
+public String getId() {
+	return id;
+}
+
+
+public void setId(String id) {
+	this.id = id;
+}
+
+
+public String getTitulo() {
+	return titulo;
+}
+
+
+public void setTitulo(String titulo) {
+	this.titulo = titulo;
+}
+
+
+public String getAutor() {
+	return autor;
+}
+
+
+public void setAutor(String autor) {
+	this.autor = autor;
+}
+
+
+public String getTematica() {
+	return tematica;
+}
+
+
+public void setTematica(String tematica) {
+	this.tematica = tematica;
+}
+
+
+public ArrayList<materialL> getArraymaterialL() {
+	return arraymaterialL;
+}
+
+
+public void setArraymaterialL(ArrayList<materialL> arraymaterialL) {
+	this.arraymaterialL = arraymaterialL;
+}
+
 }
