@@ -32,4 +32,10 @@ public void disponible() {
 	}
 }
 
+@Override
+public void imprimir() {
+	super.imprimir();
+	System.out.println("Disponible -->" + this.disponible);
+}
+
 }

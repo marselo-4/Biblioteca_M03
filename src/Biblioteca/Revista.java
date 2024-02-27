@@ -29,4 +29,9 @@ public double calcularPrecio(int unidades) {
 	return precioTotal;
 }
 
+@Override
+public void imprimir() {
+	super.imprimir();
+	System.out.println("Precio -->" + this.precio);
+}
 }

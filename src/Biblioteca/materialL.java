@@ -70,4 +70,12 @@ public void setArraymaterialL(ArrayList<materialL> arraymaterialL) {
 	this.arraymaterialL = arraymaterialL;
 }
 
+public void imprimir() {
+	System.out.println("Id -->" + this.id);
+	System.out.println("Titulo -->" + this.titulo);
+	System.out.println("Autor -->" + this.autor);
+	System.out.println("Tematica -->" + this.tematica);
+
+}
+
 }

@@ -20,6 +20,12 @@ public boolean isReservado() {
 public void setReservado(boolean reservado) {
 	this.reservado = reservado;
 }
+
+@Override
+public void imprimir() {
+	super.imprimir();
+	System.out.println("Reservado -->" + this.reservado);
+}
 }
 
 
