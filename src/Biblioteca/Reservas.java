@@ -3,9 +3,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Reservas {
-	
+	private static Scanner scan = new Scanner(System.in);
+	private static Scanner scan_s = new Scanner(System.in);
 public static void main(String[] args) {
-	Scanner scan = new Scanner(System.in);
+	
 	
 	Libro l = new Libro ("L00001", "titulo_generico1", "Perro sanche" , "pol2tica", true);	
 	Articulo a = new Articulo ("A00001", "titulo_generico2", "Pablo2otos", "f2tasia", false);
@@ -40,7 +41,14 @@ public static void main(String[] args) {
 	}//Fin main
 
 private static void reservar() {
-	mostrarObjetos();
+	System.out.println("Quiere reservar un artículo o un libro?");
+	String tipo = scan_s.nextLine().toUpperCase();
+	if (tipo.equals("LIBRO")) {
+		mostrarLibros();
+	}else if (tipo.equals("ARTICULO")) {
+		mostrarArticulos();
+	}
+	
 }
 
 private static void cancelarReserva() {
@@ -70,19 +78,8 @@ private static void mostrarReservas() {
     }
 }
 
-private static void mostrarObjetos() {
-	System.out.println("Mostrando libros: ");
-	for (materialL obj : Main.arraymaterialL) {
-		if (obj instanceof Libro) {
-            Libro lib = (Libro) obj;
-            if (!lib.getReservado()) {
-                System.out.println("------------------------------");
-                lib.imprimir();
-                System.out.println("------------------------------");
-            }
-        }
-	}
-	
+private static void mostrarArticulos() {
+
 	System.out.println("Mostrando artículos: ");
 	for (materialL obj : Main.arraymaterialL) {
 		if (obj instanceof Articulo) {
@@ -90,6 +87,20 @@ private static void mostrarObjetos() {
             if (!art.getDisponible()) {
                 System.out.println("------------------------------");
                 art.imprimir();
+                System.out.println("------------------------------");
+            }
+        }
+	}
+}
+
+private static void mostrarLibros() {
+	System.out.println("Mostrando libros: ");
+	for (materialL obj : Main.arraymaterialL) {
+		if (obj instanceof Libro) {
+            Libro lib = (Libro) obj;
+            if (!lib.getReservado()) {
+                System.out.println("------------------------------");
+                lib.imprimir();
                 System.out.println("------------------------------");
             }
         }
