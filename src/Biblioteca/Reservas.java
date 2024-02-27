@@ -34,6 +34,7 @@ public static void main(String[] args) {
 			fin = true;
 		}else if (eleccion == 3) {
 			mostrarReservas();
+			Reservas.main(null);
 			fin = true;
 		}else {
 			System.out.println("Por favor, elija una opción válida");
