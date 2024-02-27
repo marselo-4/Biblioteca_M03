@@ -110,9 +110,18 @@ public class manejo {
 			}
 		}
 	}
-	
-	public static void modificarMaterialL() {
-		
-	}
 
+	public static void modificarMaterialL() {
+		System.out.println("Indica el id del producto que desea modificar");
+		Scanner scan_String = new Scanner(System.in);
+		String id_modi = scan_String.nextLine();
+
+		for (materialL m : Main.arraymaterialL) {
+			if (id_modi.equals(m.getId())) {
+				m.editar();
+
+			}
+		}
+
+	}
 }

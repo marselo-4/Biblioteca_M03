@@ -42,9 +42,14 @@ public static void main(String[] args) {
 	//	System.out.println("El precio era: " + r.getPrecio());
 	//	
 	
-		buscar.buscarMaterialnombre();
-		buscar.buscarMaterialautor();
-		buscar.buscarMaterialtematica();
+		test1_libro.imprimir();
+		manejo.modificarMaterialL();
+		
+		//buscar.buscarMaterialnombre();
+		//buscar.buscarMaterialautor();
+		//buscar.buscarMaterialtematica();
+		
+		test1_libro.imprimir();
 
 }
 }

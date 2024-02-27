@@ -36,4 +36,3 @@ public class Libro extends materialL {
 	}
 }
 
-//Fucnio per reservar osea que cambio el boolean de false a true.
