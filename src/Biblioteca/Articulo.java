@@ -2,7 +2,7 @@ package Biblioteca;
 
 public class Articulo extends materialL {
 	private boolean disponible;
-
+	
 //Fer constructor getter i setters.
 	public Articulo(String id, String titulo, String autor, String tematica, boolean disponible) {
 		super(id, titulo, autor, tematica);

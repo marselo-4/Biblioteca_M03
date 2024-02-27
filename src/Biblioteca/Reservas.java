@@ -1,93 +1,53 @@
 package Biblioteca;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Reservas {
-    private String tipo;
-    private String titulo;
-    private String autor;
-    private boolean reservado;
-
-    public Reservas(String titulo, String autor) {
-        this.tipo = "Libro";
-        this.titulo = titulo;
-        this.autor = autor;
-        this.reservado = false;
-    }
-
-    public Reservas(String titulo, String autor, boolean reservado) {
-        this.tipo = "Articulo";
-        this.titulo = titulo;
-        this.autor = autor;
-        this.reservado = reservado;
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
-
-    public boolean isReservado() {
-        return reservado;
-    }
-
-    public void setReservado(boolean reservado) {
-        this.reservado = reservado;
-    }
-
-    public void reservar() {
-        if (!reservado) {
-            reservado = true;
-            System.out.println("Reserva realizada con éxito para " + tipo + ": " + titulo);
-        } else {
-            System.out.println("Este " + tipo + " ya está reservado.");
-        }
-    }
-
-    public void cancelarReserva() {
-        if (reservado) {
-            reservado = false;
-            System.out.println("Reserva cancelada para " + tipo + ": " + titulo);
-        } else {
-            System.out.println("No hay reserva para este " + tipo + ".");
-        }
-    }
-
-    public void mostrarInformacion() {
-        System.out.println("Información de la reserva:");
-        System.out.println("Tipo: " + tipo);
-        System.out.println("Título: " + titulo);
-        System.out.println("Autor: " + autor);
-        String res = "";
-        if (reservado) {
-			res = "Si";
+	
+public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+	
+	System.out.println("Que quiere hacer?");
+	System.out.println("1--> Reservar un producto");
+	System.out.println("2--> Cancelar reserva");
+	System.out.println("3--> Ver reservas");
+	
+	
+	boolean fin = false;
+	while (!fin) {
+		int eleccion = scan.nextInt();
+		if (eleccion == 1) {
+			reservar();
+			fin = true;
+		}else if (eleccion == 2) {
+			cancelarReserva();
+			fin = true;
+		}else if (eleccion == 3) {
+			historialReservas();
+			fin = true;
 		}else {
-			res = "No";
+			System.out.println("Por favor, elija una opción válida");
 		}
-        System.out.println("Reservado: " + res);
-    }
+	}//Fin while
 
-    public static void main(String[] args) {
-        Reservas reservaLibro = new Reservas("El Quijote", "Miguel de Cervantes");
-        reservaLibro.reservar();
-        reservaLibro.mostrarInformacion();
-        reservaLibro.cancelarReserva();
-    }
+	}//Fin main
+
+private static void reservar() {
+	
 }
+
+private static void cancelarReserva() {
+	
+}
+
+private static void historialReservas() {
+	
+}
+
+private static void mostrarReservas() {
+	for (int i = 0; i < Main.arraymaterialL.size(); i++) {
+		
+	}
+}
+
+}//Fin clase

@@ -3,7 +3,6 @@ package Biblioteca;
 import java.util.ArrayList;
 
 public class Testeo {
-	public static ArrayList<materialL> arraymaterialL = new ArrayList<>();
 
 public static void main(String[] args) {
 	// Menu amb ifs o switch case o lo q sigui per nar fent les dif accions(imporar
@@ -17,10 +16,10 @@ public static void main(String[] args) {
 	Articulo test1_articulo = new Articulo ("A00001", "titulo_generico2", "Pablo motos", "fantasia", true);
 	
 	Revista test1_revista = new Revista ("R00001", "titulo_generico3", "Santi abascal", "gastronomia", 10.99);
-	arraymaterialL.add(test1_libro);
-	arraymaterialL.add(test1_articulo);
-	arraymaterialL.add(test1_revista);
-	arraymaterialL.add(test2_libro);
+	Main.arraymaterialL.add(test1_libro);
+	Main.arraymaterialL.add(test1_articulo);
+	Main.arraymaterialL.add(test1_revista);
+	Main.arraymaterialL.add(test2_libro);
 	
 	
 	//	 
@@ -35,7 +34,8 @@ public static void main(String[] args) {
 	//	a.disponible();
 	//	
 	Revista r = new Revista("1b", "Revistzoca", "bazoka", "comedia", 3.5);
-	arraymaterialL.add(r);
+	Main.arraymaterialL.add(r);
+
 	
 	//	System.out.println("CALCULAR PRECIO REVISTA");
 	//	System.out.println(r.calcularPrecio(4));

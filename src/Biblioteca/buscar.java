@@ -13,7 +13,7 @@ public class buscar {
 		System.out.println("Introduzca el nombre del material que quiere buscar");
 		String nombre = scan.nextLine();
 
-		for (materialL m : Testeo.arraymaterialL) {
+		for (materialL m : Main.arraymaterialL) {
 			if (nombre.equals(m.getTitulo())) {
 				m.imprimir();
 				encontrado = true;
@@ -31,7 +31,7 @@ public class buscar {
 		System.out.println("Introduzca el autor del material que quiere buscar");
 		String autor = scan.nextLine();
 
-		for (materialL m : Testeo.arraymaterialL) {
+		for (materialL m : Main.arraymaterialL) {
 			if (autor.equals(m.getAutor())) {
 				m.imprimir();
 				System.out.println("--------------");
@@ -49,7 +49,7 @@ public class buscar {
 		System.out.println("Introduzca la tematica del material que quiere buscar");
 		String tematica = scan.nextLine();
 
-		for (materialL m : Testeo.arraymaterialL) {
+		for (materialL m : Main.arraymaterialL) {
 			if (tematica.equals(m.getTematica())) {
 				m.imprimir();
 				System.out.println("--------------");
