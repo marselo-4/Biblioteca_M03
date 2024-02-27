@@ -22,19 +22,19 @@ public class manejo {
 			System.out.println("3--> Articulo");
 			int eleccion_2 = scan.nextInt();
 			if (eleccion_2 == 1) {
-
+				añadirLibro();
 			} else if (eleccion_2 == 2) {
-
+				añadirRevista();
 			} else if (eleccion_2 == 3) {
-
+				añadirArticulo();
 			} else {
 				System.out.println("Opcion no valida");
 			}
 
 		} else if (eleccion == 2) {
-
+			eliminarMaterialL();
 		} else if (eleccion == 3) {
-
+			modificarMaterialL();
 		} else {
 			System.out.println("Opcion no valida");
 		}
