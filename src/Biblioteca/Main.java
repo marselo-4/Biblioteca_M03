@@ -49,3 +49,4 @@ public class Main {
 		}
 	}
 }
+//No permet eliminar contingut  java.util.ConcurrentModificationException

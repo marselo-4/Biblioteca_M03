@@ -15,8 +15,10 @@ public class buscar {
 
 		for (materialL m : Main.arraymaterialL) {
 			if (nombre.equals(m.getTitulo())) {
+				System.out.println("-------------------");
 				m.imprimir();
 				encontrado = true;
+				System.out.println("-------------------");
 			} 
 			}
 		if (!encontrado){
@@ -33,8 +35,9 @@ public class buscar {
 
 		for (materialL m : Main.arraymaterialL) {
 			if (autor.equals(m.getAutor())) {
+				System.out.println("-------------------");
 				m.imprimir();
-				System.out.println("--------------");
+				System.out.println("-------------------");
 				encontrado = true;
 			} 
 		}
@@ -51,8 +54,9 @@ public class buscar {
 
 		for (materialL m : Main.arraymaterialL) {
 			if (tematica.equals(m.getTematica())) {
+				System.out.println("-------------------");
 				m.imprimir();
-				System.out.println("--------------");
+				System.out.println("-------------------");
 				encontrado = true;
 			}
 		}

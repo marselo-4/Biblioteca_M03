@@ -74,7 +74,7 @@ public class manejo {
 		System.out.println("Introduzca tematica de la revista");
 		String tematica = scan_String.nextLine();
 		System.out.println("Introduzca el precio de la revista");
-		int precio = scan_num.nextInt();
+		double precio = scan_num.nextDouble();
 		Revista r = new Revista(id, titulo, autor, tematica, precio);
 		Main.arraymaterialL.add(r);
 
@@ -107,6 +107,7 @@ public class manejo {
 		for (materialL m : Main.arraymaterialL) {
 			if (id_eliminar.equals(m.getId())) {
 				Main.arraymaterialL.remove(m);
+				break;
 			}
 		}
 	}
