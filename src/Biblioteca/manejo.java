@@ -73,7 +73,7 @@ public class manejo {
 		String autor = scan_String.nextLine();
 		System.out.println("Introduzca tematica de la revista");
 		String tematica = scan_String.nextLine();
-		System.out.println("Introduzca el precio de la revista");
+		System.out.println("Introduzca el precio de la revista (0,00)");
 		double precio = scan_num.nextDouble();
 		Revista r = new Revista(id, titulo, autor, tematica, precio);
 		Main.arraymaterialL.add(r);
